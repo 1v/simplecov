@@ -14,7 +14,11 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = ">= 1.8.7"
 
-  gem.add_dependency "json", ">= 1.8", "< 3"
+  if RUBY_VERSION < "2"
+    gem.add_dependency "json", ">= 1.8", "< 2"
+  else
+    gem.add_dependency "json", ">= 1.8", "< 3"
+  end
   gem.add_dependency "simplecov-html", "~> 0.10.0"
   gem.add_dependency "docile", "~> 1.1.0"
 
