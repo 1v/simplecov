@@ -17,8 +17,7 @@ group :test do
   end
   platform :ruby_18, :ruby_19 do
     gem "mime-types", "~> 1.25"
-    gem "json", "~> 1.8"
-    gem "public_suffix", "~> 1.4.0"
+    gem "public_suffix", "1.4.2"
   end
   platform :ruby_18, :ruby_19, :ruby_20, :ruby_21 do
     gem "rack", "~> 1.6"
